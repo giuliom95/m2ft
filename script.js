@@ -1,6 +1,3 @@
-const white = '#ffefef';
-
-const list_div = document.getElementById('list');
 
 const entries = `[
     {
@@ -95,30 +92,31 @@ const entries = `[
     }
 ]`;
 
+const white = '#ffefef';
 
-if (ciao) {
-    var data = JSON.parse(entries);
-    data.forEach(element => {
-    
-        const block_container = document.createElement('div');
-        block_container.setAttribute('class', 'block_container');
-    
-        const block = document.createElement('div');
-        block.setAttribute('class', 'block');
-        if(element.white_title)
-            block.style.color = white;
-        block.style.backgroundImage = 'url(./projects/' + element.id + '/preview.jpg)';
-    
-        const inner_block_text = document.createElement('div');
-        inner_block_text.textContent = element.name;
-        block.appendChild(inner_block_text);
-    
-        const inner_block_cover = document.createElement('div');
-        inner_block_cover.setAttribute('class', 'cover');
-        block.appendChild(inner_block_cover);
-    
-        block_container.appendChild(block);
-        list_div.appendChild(block_container);
-    });
-}
+const list_div = document.getElementById('list');
+
+var data = JSON.parse(entries);
+data.forEach(element => {
+
+    const block_container = document.createElement('div');
+    block_container.setAttribute('class', 'block_container');
+
+    const block = document.createElement('div');
+    block.setAttribute('class', 'block');
+    if(element.white_title)
+        block.style.color = white;
+    block.style.backgroundImage = 'url(./projects/' + element.id + '/preview.jpg)';
+
+    const inner_block_text = document.createElement('div');
+    inner_block_text.textContent = element.name;
+    block.appendChild(inner_block_text);
+
+    const inner_block_cover = document.createElement('div');
+    inner_block_cover.setAttribute('class', 'cover');
+    block.appendChild(inner_block_cover);
+
+    block_container.appendChild(block);
+    list_div.appendChild(block_container);
+});
 

@@ -17,12 +17,23 @@ body {
 
 #menu div {
     margin-bottom: 5px;
+    color: blue;
+}
+
+#menu span:hover {
+    text-decoration: underline;
 }
 
 #menu img {
     width: 230px;
     margin-bottom: 90px;
 }
+
+#menu a {
+    text-decoration: none;
+    color: black;
+}
+
 
 #list {
     float: right;

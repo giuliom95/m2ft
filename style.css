@@ -7,6 +7,7 @@ body {
     background-color: #ffefef;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 #menu {
     float: left;
     min-width: 360px;
@@ -109,15 +110,45 @@ body {
 @media (max-width: 850px) {
     /* One total column */
     
-    .menu {
+    #menu {
         float: none;
         width: 100%;
         position: relative;
         margin-bottom: 50px;
     }
     
-    .menu img {
+    #menu img {
         margin-bottom: 40px;
+    }
+    
+    #list {
+        float: none;
+        width: 100%;        
+    }
+    
+    .block_container {
+        padding-top: 64%;
+        font-size: 12vw;
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 1%;
+    }
+}
+
+@media (max-width: 1700px) 
+    and (min-resolution: 2dppx) {
+
+    #menu {
+        float: none;
+        width: 100%;
+        position: relative;
+        margin-bottom: 50px;
+        font-size: 760%;
+    }
+    
+    #menu img {
+        width: 460px;
+        margin-bottom: 90px;
     }
     
     #list {
